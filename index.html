@@ -29,9 +29,11 @@
         <div class="">
             <div class="todo_list">
                 <ul>
-                    <li v-for="todo in todoList">
+                    <li v-for="(todo, index) in todoList">
                         {{todo.text}}
+                        <button @click="removeTask(index)" class="btn">X</button>
                     </li>
+                    
                 </ul>
             </div>
         </div>

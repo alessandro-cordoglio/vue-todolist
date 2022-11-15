@@ -18,6 +18,9 @@ createApp({
                 this.todoList.push({text:`${this.newTodo}`, done:false})
                 this.newTodo=''
             }
+        },
+        removeTask(i){
+            this.todoList.splice(i,1)
         }
     }
   }).mount('#app')

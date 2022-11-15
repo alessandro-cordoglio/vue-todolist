@@ -19,9 +19,9 @@
             <h1 class="pt-4 text-white text-center">WORK TO DO</h1>
         </div>
         <div class="d-flex justify-content-center align-items-center">
-            <form class="d-flex align-items-center rounded border border-dark input mt-5">
+            <form class="d-flex align-items-center rounded border border-dark input mt-5" @submit.prevent="" >
                 <input class="ms-2 rounded" type="text" id="task" required placeholder="inserisci una task">
-                <button class="fs-3 my_btn btn rounded">
+                <button type="submit" class="fs-3 my_btn btn rounded">
                     <i class="fa-solid fa-plus"></i>
                 </button>
             </form>
@@ -30,7 +30,7 @@
             <div class="todo_list">
                 <ul>
                     <li v-for="todo in todoList">
-                        {{todo}}
+                        {{todo.text}}
                     </li>
                 </ul>
             </div>

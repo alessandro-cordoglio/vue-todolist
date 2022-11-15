@@ -4,10 +4,16 @@ createApp({
     data() {
       return {
         todoList:[
-            "prova",
-            "prova",
-            "prova"
+            {
+                text:"prova",
+                done: true
+            },
         ]
       }
+    },
+    methods:{
+        addTask(){
+            this.push(todo.text)
+        }
     }
   }).mount('#app')

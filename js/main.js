@@ -7,7 +7,7 @@ createApp({
         todoList:[
             {
                 text:"prova",
-                done: false
+                done: true
             },
         ],
       }

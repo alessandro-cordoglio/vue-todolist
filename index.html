@@ -29,9 +29,13 @@
         <div class="">
             <div class="todo_list">
                 <ul>
-                    <li v-for="(todo, index) in todoList">
-                        {{todo.text}}
-                        <button @click="removeTask(index)" class="btn">X</button>
+                    <li class="d-flex align-items-center" v-for="(todo, index) in todoList">
+                        <div :class="todo.done===true? 'task_done' : ''">
+                            {{todo.text}}
+                        </div>
+                        <div class="ms-3">
+                            <button @click="removeTask(index)" class="btn">X</button>
+                        </div>
                     </li>
                     
                 </ul>

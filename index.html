@@ -20,8 +20,8 @@
         </div>
         <div class="d-flex justify-content-center align-items-center">
             <form class="d-flex align-items-center rounded border border-dark input mt-5" @submit.prevent="" >
-                <input class="ms-2 rounded" type="text" id="task" required placeholder="inserisci una task">
-                <button type="submit" class="fs-3 my_btn btn rounded">
+                <input class="ms-2 rounded" type="text" id="task" required placeholder="inserisci una task" v-model="newTodo">
+                <button @click="addTask" type="submit" class="fs-3 my_btn btn rounded">
                     <i class="fa-solid fa-plus"></i>
                 </button>
             </form>

@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
       return {
+        newTodo:"",
         todoList:[
             {
                 text:"prova",
@@ -13,7 +14,7 @@ createApp({
     },
     methods:{
         addTask(){
-            this.push(todo.text)
+            this.todoList.push({text:`${this.newTodo}`, done:false})
         }
     }
   }).mount('#app')

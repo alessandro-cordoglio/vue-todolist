@@ -7,14 +7,17 @@ createApp({
         todoList:[
             {
                 text:"prova",
-                done: true
+                done: false
             },
-        ]
+        ],
       }
     },
     methods:{
         addTask(){
-            this.todoList.push({text:`${this.newTodo}`, done:false})
+            if (!(this.newTodo==='')) {
+                this.todoList.push({text:`${this.newTodo}`, done:false})
+                this.newTodo=''
+            }
         }
     }
   }).mount('#app')

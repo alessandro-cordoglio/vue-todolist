@@ -33,3 +33,6 @@ input:focus{
 .todo_list ul{
     text-decoration: none;
 }
+.task_done{
+    text-decoration: line-through;
+}

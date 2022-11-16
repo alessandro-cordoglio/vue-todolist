@@ -21,6 +21,13 @@ createApp({
         },
         removeTask(i){
             this.todoList.splice(i,1)
-        }
+        },
+        taskDone(todo){
+           if (todo.done==true) {
+            todo.done=false
+           }else{
+            todo.done=true
+           }
+        } 
     }
   }).mount('#app')
